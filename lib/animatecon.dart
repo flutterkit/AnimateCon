@@ -8,7 +8,13 @@ final EaseInstanceClass animateEase = EaseInstanceClass();
 class AnimateCon extends StatefulWidget {
   final Widget child;
   final Map<String, double> initProp;
-  const AnimateCon({required this.child, required this.initProp, Key? key})
+  final bool useVisibility = false;
+
+  const AnimateCon(
+      {required this.child,
+      required this.initProp,
+      bool useVisibility = false,
+      Key? key})
       : super(key: key);
 
   @override
@@ -36,9 +42,12 @@ class AnimateConState extends State<AnimateCon> {
       {int time = 600, Function? ease, Function? onComplete, int delay = 0}) {
     ease = ease ?? Tweener.ease.cubic.easeOut;
 
-    setState(() {
-      _visible = true;
-    });
+    if (widget.useVisibility) {
+      setState(() {
+        _visible = true;
+      });
+    }
+
     _tween = Tweener(from)
         .to(to, time)
         .delay(delay)
@@ -82,8 +91,10 @@ class AnimateConState extends State<AnimateCon> {
         offset: Offset(prop.x, prop.y),
         child: Transform.scale(
             scale: prop.scale,
-            child: Visibility(
-                visible: _visible,
-                child: Opacity(opacity: prop.alpha, child: widget.child))));
+            child: widget.useVisibility
+                ? Visibility(
+                    visible: _visible,
+                    child: Opacity(opacity: prop.alpha, child: widget.child))
+                : Opacity(opacity: prop.alpha, child: widget.child)));
   }
 }
