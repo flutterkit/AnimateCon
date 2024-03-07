@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:tweener/tweener.dart';
 import './AnimateProp.dart';
 
+final EaseInstanceClass animateEase = EaseInstanceClass();
+
 class AnimateCon extends StatefulWidget {
   final Widget child;
   final Map<String, double> initProp;
@@ -10,10 +12,10 @@ class AnimateCon extends StatefulWidget {
       : super(key: key);
 
   @override
-  AniConState createState() => AniConState();
+  AnimateConState createState() => AnimateConState();
 }
 
-class AniConState extends State<AnimateCon> {
+class AnimateConState extends State<AnimateCon> {
   AnimateProp prop = AnimateProp();
   Tweener? _tween;
   bool _visible = true;
