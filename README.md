@@ -4,7 +4,7 @@ AnimateCon is a lightweight and easy-to-use Flutter animation container that ena
 
 ## Installation
 
-### Install the AnimateCon [https://pub.dev/packages/animatecon](https://pub.dev/packages/animatecon):
+### Install the AnimateCon
 
 #### You should ensure that you add the following dependency in your Flutter project.
 ```shell
@@ -57,4 +57,4 @@ _key.currentState!.stop();
 ```
 
 ## License
-AnimateCon is licensed under MIT license. View license. [https://github.com/flutterkit/AnimateCon/blob/master/LICENSE](https://github.com/flutterkit/zerker/blob/master/LICENSE)
+AnimateCon is licensed under MIT license. View license.[https://github.com/flutterkit/AnimateCon/blob/master/LICENSE](https://github.com/flutterkit/zerker/blob/master/LICENSE)
