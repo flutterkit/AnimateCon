@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:tweener/tweener.dart';
-import './AnimateProp.dart';
+import './animateprop.dart';
 
 final EaseInstanceClass animateEase = EaseInstanceClass();
 
