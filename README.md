@@ -9,7 +9,7 @@ AnimateCon is a lightweight and easy-to-use Flutter animation container that ena
 #### You should ensure that you add the following dependency in your Flutter project.
 ```shell
 dependencies:
-  animatecon: ^1.1.0
+  animatecon: latest
 ```
 
 #### install packages from the command line:
