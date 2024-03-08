@@ -52,6 +52,10 @@ void _animate() {
     _btnEnabled = false;
 }
 
+/// animate scale position alpha props
+_key.currentState!.animate({"y": 100, "scale": 0.0}, {"y": 0.0, "scale": 1.0},
+        time: 500, ease: animateEase.back.easeOut);
+
 /// stop animate
 _key.currentState!.stop();
 ```
